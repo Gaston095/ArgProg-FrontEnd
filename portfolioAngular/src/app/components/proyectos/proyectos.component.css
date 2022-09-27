@@ -1,0 +1,100 @@
+/*Proyectos*/
+.proyectos {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+	.proyectos__titulo {
+		font-size: 38px;
+		margin-top: 65px;
+		border-bottom: 2px solid var(--color-principal);
+	}
+
+
+	.proyectos__contenedor {
+		width: 90%;
+		margin: 50px auto;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+			.tarjeta-wrap {
+				margin:10px;
+				-webkit-perspective: 800;
+			}
+
+
+			.tarjeta {
+				width: 300px;
+				height: 350px;
+				/*background: linear-gradient(rgb(1,80,93),rgb(74,1,56));*/
+				/*background: linear-gradient(#222,#000);*/
+				background: rgb(0,103,122);
+background: linear-gradient(102deg, rgba(0,103,122,1) 0%, rgba(3,39,48,1) 100%);
+				position: relative;
+				transform-style: preserve-3d;
+				transition: .7s ease;
+				box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65)
+			}
+		
+					.adelante, .atras {
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+						-webkit-backface-visibility: hidden;
+						backface-visibility: hidden;
+					}
+		
+					.adelante {
+						width: 100%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						padding: 15px;
+						text-align: center;
+						color: var(--color-principal);
+						font-size: 21px;
+						text-shadow: 1px 1px 0 #333;
+					}
+		
+					.atras {
+						transform: rotateY(180deg);
+						display: flex;
+						flex-direction: column;
+						justify-content: space-around;
+						align-items: center;
+						padding: 15px 30px;
+						text-align: start;
+						color: #fff;
+						font-size: 20px;
+					}
+
+					.atras a{
+						text-decoration: none;
+						padding: 5px;
+						background-color: #fff;
+						backface-visibility: hidden;
+						border-radius: 5px;
+						color: var(--color-principal);
+					}
+
+					.atras a:hover {
+						background-color: var(--color-principal);
+						color: #fff;
+					}
+		
+		
+.tarjeta-wrap:hover .tarjeta {
+	transform: rotateY(180deg);
+}
+
+.carta1 {
+	background-image: url(../../../assets/fondoProyectos.jpg);
+	background-size: cover;
+	background-position: center;
+}
